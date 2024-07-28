@@ -51,3 +51,41 @@ p {
   align-items: center;
   margin-top: 20px;
 }
+
+.input-section input {
+  margin: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  font-size: 18px;
+}
+
+.calc-button {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: rgba(255, 255, 255, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+  font-family: inherit;
+  font-size: 24px;
+  height: 50px;
+  width: 100px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.calc-button:hover {
+  background-color: #ffef78;
+}
+
+.calc-button:active {
+  background-color: #ffef78;
+}
+
+.result-section p {
+  margin-top: 10px;
+  font-size: 20px;
+  color: #232323;
+}
