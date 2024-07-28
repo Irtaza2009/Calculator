@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Quadratic Equation Solver</title>
+  </head>
+  <body>
+    <div class="wrapper" role="main" aria-label="Quadratic Equation Solver">
+      <h1>Quadratic Equation Solver</h1>
+      <p>Quadratic Equation: ax² + bx + c = 0</p>
+      <h2>Input your values</h2>
+      <section class="input-section">
+        <input type="number" id="a" placeholder="Enter a" />
+        <input type="number" id="b" placeholder="Enter b" />
+        <input type="number" id="c" placeholder="Enter c" />
+        <button class="calc-button" onclick="solveQuadratic()">Solve</button>
+      </section>
+      <section class="result-section">
+        <p>x<sub>1</sub> = <span id="result1">0</span></p>
+        <p>x<sub>2</sub> = <span id="result2">0</span></p>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

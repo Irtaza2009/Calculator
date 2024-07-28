@@ -127,3 +127,7 @@ function factorial(n) {
     return n * factorial(n - 1);
   }
 }
+
+function redirectToQuadraticSolver() {
+  window.location.href = "Quadratic-Equation/index.html";
+}
