@@ -40,7 +40,17 @@ function handleSymbol(symbol) {
     case "−":
     case "×":
     case "÷":
+    case "^":
       handleMath(symbol);
+      break;
+    case "%":
+      buffer = (parseFloat(buffer) / 100).toString();
+      break;
+    case "√":
+      buffer = Math.sqrt(parseFloat(buffer)).toString();
+      break;
+    case "!":
+      buffer = factorial(buffer);
       break;
   }
 }
@@ -71,6 +81,9 @@ function flushOperation(floatBuffer) {
       break;
     case "×":
       runningTotal *= floatBuffer;
+      break;
+    case "^":
+      runningTotal = Math.pow(runningTotal, floatBuffer);
       break;
     case "÷":
       if (floatBuffer === 0) {
@@ -104,3 +117,13 @@ function init() {
 }
 
 init();
+
+function factorial(n) {
+  if (n < 0) {
+    return "Invalid input";
+  } else if (n == 0) {
+    return 1;
+  } else {
+    return n * factorial(n - 1);
+  }
+}

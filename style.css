@@ -32,7 +32,7 @@ body {
   background: rgba(255, 255, 255, 0.3);
   border: 1px solid rgba(255, 255, 255, 0.34);
   flex-basis: 400px;
-  height: 540px;
+  height: 630px;
   padding: 20px 35px;
   max-width: 90%;
 }
@@ -78,6 +78,11 @@ body {
   background: #d72880;
 }
 
+.calc-button:last-child:hover {
+  color: inherit;
+  background: inherit;
+}
+
 .calc-button:hover {
   background-color: #ffef78;
 }
@@ -92,4 +97,23 @@ body {
 
 .triple {
   flex-basis: 73%;
+}
+
+.redirect-button {
+  backdrop-filter: blur(5.5px);
+  -webkit-backdrop-filter: blur(5.5px);
+  background: #d72880;
+  border: 1px solid rgba(255, 255, 255, 0.01);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #fff;
+
+  flex-basis: 100%;
+  font-family: inherit;
+  font-size: 24px;
+  height: 65px;
+  transition: background-color 0.3s, color 0.3s;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
