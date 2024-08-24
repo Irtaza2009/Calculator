@@ -10,15 +10,18 @@ function solveQuadratic() {
 
   const discriminant = b * b - 4 * a * c;
 
+  let x1, x2;
   if (discriminant < 0) {
-    alert("No real roots exist for the given values");
-    return;
+    const realPart = (-b / (2 * a)).toFixed(2);
+    const imaginaryPart = (Math.sqrt(-discriminant) / (2 * a)).toFixed(2);
+    x1 = `${realPart} + ${imaginaryPart}i`;
+    x2 = `${realPart} - ${imaginaryPart}i`;
+  } else {
+    const sqrtDiscriminant = Math.sqrt(discriminant);
+    x1 = ((-b + sqrtDiscriminant) / (2 * a)).toFixed(2);
+    x2 = ((-b - sqrtDiscriminant) / (2 * a)).toFixed(2);
   }
 
-  const sqrtDiscriminant = Math.sqrt(discriminant);
-  const x1 = (-b + sqrtDiscriminant) / (2 * a);
-  const x2 = (-b - sqrtDiscriminant) / (2 * a);
-
-  document.getElementById("result1").innerText = x1.toFixed(2);
-  document.getElementById("result2").innerText = x2.toFixed(2);
+  document.getElementById("result1").innerText = x1;
+  document.getElementById("result2").innerText = x2;
 }
